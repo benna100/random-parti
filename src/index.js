@@ -60,7 +60,7 @@ let parties = [
         color: 'rgb(108, 139, 184)',
     }, {
         letter: 'K',
-        name: 'Kristen Demolraterne',
+        name: 'Kristen Demokraterne',
         color: 'rgb(137, 133, 113)',
     }
 ];
@@ -86,7 +86,7 @@ function createWheelOfFortune(cx, cy, r, slices) {
 
         text.setAttributeNS(null, 'x', middle.x - 6);
         text.setAttributeNS(null, 'y', middle.y + 6);
-        text.setAttributeNS(null, 'style', `transform: rotate(${fromAngle + 98}deg); transform-origin: ${middle.x}px ${middle.y}px;`);
+        text.setAttributeNS(null, 'style', `transform: rotate(${fromAngle + 103}deg);`);
         const textNode = document.createTextNode(party.letter);
         text.appendChild(textNode);
         
@@ -131,7 +131,7 @@ function showWinner() {
         winnerParty.path.setAttributeNS(null, "fill", winnerParty.color);
         clearTimeout(setTimeoutId);
     }
-    degrees = degrees + getRandomInt(800, 2000);
+    degrees = degrees + getRandomInt(720, 2160);
     wheelOfFortune.style = `transform: rotate(${-degrees}deg);`
 
     winnerParty = parties.find(party => {

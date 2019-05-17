@@ -72,7 +72,12 @@ body {
 
         path {
           stroke: black;
-        }
+				}
+				
+				text {
+					transform-box: fill-box;
+					transform-origin: center center;
+				}
       }
     }
 
